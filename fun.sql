@@ -64,3 +64,16 @@ $$
 
 $$
   
+
+
+
+CREATE or replace FUNCTION  rt()
+returns TABLE("id1" int ,"title1" text )
+language plpgsql
+as
+$$
+BEGIN
+	RETURN QUERY 
+	SELECT "id","title" from "Movies";
+END;
+$$
