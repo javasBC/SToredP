@@ -50,3 +50,17 @@ select  sum("year") from "Movies"
   
   
   
+  
+  create function my_sum(numb1 float8,numb2 float8)
+returns float8
+language plpgsql 
+AS
+$$
+	DECLARE
+		temp1 float8 := 6;
+	begin 
+		return temp1+numb1+numb2;
+	end;
+
+$$
+  
